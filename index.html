@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exchange Rate API</title>
+</head>
+<body>
+    <div class="container">
+       
+        <h1>Currency Converter</h1>
+
+        <h2>From:</h2>
+        <label class="label" for="currency">Choose a currency:</label>
+        <select id="FromCurrency"></select>
+
+        <h2>To:</h2>
+        <label class="label" for="currency">Choose a currency:</label>
+        <select id="ToCurrency"></select>
+
+
+        <div class="AmountContainer">
+            <input type="number" id="amount" placeholder="Enter Amount">
+            <button id="convertBtn">Convert</button>
+            <h2 id="finalAmount"></h2>
+        </div>
+    </div>
+    
+<script src="script.js"></script>
+</body>
+</html>
