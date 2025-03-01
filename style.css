@@ -74,18 +74,23 @@ button {
 #FromCurrency {
     margin-top: 30px;
     color: white;
+    font-size: 1rem;
     font-weight: bold;
     border: 2px solid white;
+
 }
 
 #FromCurrency:hover {
     background-color: rgb(85, 205, 165);
-    color: black;
+    font-size: 1rem;
+
 }
 
 #ToCurrency {
     margin-top: 30px;
     color: white;
+    font-size: 1rem;
+
     font-weight: bold;
     border: 2px solid white;
 }
@@ -93,7 +98,7 @@ button {
 #amount {
     /* margin-top: 30px; */
     color: black;
-    /* font-weight: bold; */
+    font-size: 1rem;
     border: 2px solid white;
 }
 
