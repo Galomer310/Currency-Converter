@@ -1,4 +1,13 @@
-
+/* Base Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(85, 205, 165);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 .container {
     display: flex;
@@ -6,23 +15,25 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
- 
+    /* By default, the container can take full width on smaller screens */
+    width: 90%;
 }
 
 h1 {
     font-size: 3rem;
-    font-family: 'Courier New', Courier, monospace;
- 
+    font-weight: bold;
+    color: white;
 }
 
 h2 {
     font-size: 2rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
 }
 
 .label {
     font-size: 1.5rem;
-    
+    font-weight: bold;
 }
 
 select {
@@ -30,21 +41,137 @@ select {
     border-radius: 5px;
     background-color: rgb(85, 205, 165);
     padding-left: 10px;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    max-width: 300px;
 }
 
 input {
     padding: 10px;
     margin-top: 30px;
-    border-radius: 20px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+    max-width: 300px;
 }
 
 button {
     padding: 10px;
     border-radius: 10px;
     background-color: rgb(85, 205, 165);
+    width: 100%;
+    max-width: 300px;
 }
 
 #finalAmount {
-    color: rgb(36, 14, 14);
-    font-size: 2rem;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#FromCurrency {
+    margin-top: 30px;
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+#FromCurrency:hover {
+    background-color: rgb(85, 205, 165);
+    color: black;
+}
+
+#ToCurrency {
+    margin-top: 30px;
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+#amount {
+    /* margin-top: 30px; */
+    color: black;
+    /* font-weight: bold; */
+    border: 2px solid white;
+}
+
+#convertBtn {
+    margin-top: 30px;
+    color: white;
+    border: 2px solid white;
+    font-weight: bold;
+}
+
+#convertBtn:hover {
+    background-color: white;
+    color: rgb(85, 205, 165);
+}
+
+#swapBtn {
+    margin: 20px 0;
+    padding: 8px 12px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: rgb(85, 205, 165);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#swapBtn:hover {
+    background-color: white;
+    color: rgb(85, 205, 165);
+}
+
+/* Media Queries */
+
+/* For desktops and larger screens */
+@media (min-width: 1024px) {
+    .container {
+        width: 50%;  /* narrower container for larger screens */
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        width: 70%;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 767px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+        height: auto;  /* Allow container height to adjust if needed */
+    }
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    select, input, button {
+        max-width: 100%;  /* use the full width available */
+    }
+    #finalAmount {
+        font-size: 2.5rem;
+    }
 }
